@@ -193,10 +193,10 @@ const ManagePlan = ({ match }) => {
 						/>
 					}
 					<Grid container className="yook-ha-con" direction="column" justify="flex-start" alignItems="stretch">
-						<Top3></Top3>
+						<Top3 isloggedin={isloggedin}></Top3>
 						<Yookha senddata={senddata}></Yookha>
 						<Findmidplace></Findmidplace>
-						<Comment></Comment>
+						<Comment isloggedin={isloggedin}></Comment>
 						<Grid className="btn-con">
 							<Button variant="contained" color="primary" onClick={copyDOM}>카카오톡 공유하기</Button>
 							<CopyToClipboard text={window.location.href} onCopy={() => window.alert("링크가 복사되었습니다.")}>

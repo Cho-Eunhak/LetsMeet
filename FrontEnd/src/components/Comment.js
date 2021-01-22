@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Button } from '@material-ui/core';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
-const Comment = ({match}) => {
+const Comment = ({match, isloggedin}) => {
 	const [comments, setcomments] = useState(null);
 	const [text, settext] = useState('');
 
@@ -39,7 +39,7 @@ const Comment = ({match}) => {
 	};
 	useEffect(() => {
 		fetchComments();
-	  }, []);
+	  }, [isloggedin]);
 	
 	const handlesubmit = (e) => {
 		e.preventDefault();
